@@ -7,4 +7,8 @@ public interface BookRepository {
     List<Book> findAll();
     List<Book> searchByTitle(String text);
     Book save(Book book);
+
+    Book findById(Long id);
+    void deleteById(Long id);
+
 }

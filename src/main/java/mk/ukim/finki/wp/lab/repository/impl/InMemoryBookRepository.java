@@ -28,4 +28,17 @@ public class InMemoryBookRepository implements BookRepository {
         DataHolder.books.add(book);
         return book;
     }
+
+    @Override
+    public Book findById(Long id) {
+        return DataHolder.books.stream()
+                .filter(b -> b.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        DataHolder.books.removeIf(b -> b.getId().equals(id));
+    }
 }

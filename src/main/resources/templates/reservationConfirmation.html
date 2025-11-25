@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Book Reservation - Confirmation</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<section>
+    <h1>Book Reservation - Confirmation</h1>
+
+    <table>
+        <tr><th colspan="2">Your Reservation Status</th></tr>
+
+        <tr><td><b>Reader Name</b></td>
+            <td th:text="${readerName}"></td></tr>
+
+        <tr><td><b>Client IP Address</b></td>
+            <td th:text="${clientIp}"></td></tr>
+
+        <tr><td><b>Reservation for Book</b></td>
+            <td th:text="${bookTitle}"></td></tr>
+
+        <tr><td><b>Number of copies</b></td>
+            <td th:text="${numberOfCopies}"></td></tr>
+    </table>
+</section>
+</body>
+</html>
